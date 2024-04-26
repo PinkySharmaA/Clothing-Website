@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('webpic.jpg');
+  background-size: cover;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  border-radius: 10px 10px 0 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+main {
+  padding: 20px 0;
+}
+
+.signup-form {
+  float: right; /* Move the signup form to the right */
+  width: 40%; /* Set width of the signup form */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.signup-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group small {
+  display: block;
+  margin-top: 5px;
+}
+
+.signup-form button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.signup-form button[type="submit"]:hover {
+  background-color: #555;
+}

@@ -1,0 +1,70 @@
+/* Reset some default styles */
+body, h1, p, img, button {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+  }
+  
+  /* Center the content vertically and horizontally */
+  .enlarged-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+  }
+  
+  /* Style the h1 */
+  h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the enlarged image */
+  .enlarged-image img {
+    max-width: 80%;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style the product details */
+  .product-details {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 80%;
+  }
+  
+  .product-details h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .product-details p {
+    font-size: 16px;
+    color: #666;
+    margin: 5px 0;
+  }
+  
+  /* Style the buttons */
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  

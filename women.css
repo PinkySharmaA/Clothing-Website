@@ -1,0 +1,101 @@
+/* Global styles */
+.container {
+  display: flex;
+  position: relative; /* Position container relative for sidebar to be fixed */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Ensure the body fills the entire viewport */
+  display: flex;
+  flex-direction: column; /* Ensure the body takes full height even if content is less */
+}
+
+.sidebar {
+  background-color: #333;
+  color: white;
+  width: 200px;
+  padding: 20px;
+  height: 100vh; /* Make the sidebar cover the entire height */
+  position: fixed; /* Fix the sidebar position */
+  top: 0; /* Align sidebar to top */
+  left: 0; /* Align sidebar to left */
+}
+
+.sidebar h2 {
+  margin-top: 0;
+  text-align: center; /* Center the sidebar heading */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px; /* Add some space between list items */
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  display: block; /* Make links take the full width of the sidebar */
+  padding: 10px; /* Add padding for better clickability */
+}
+
+.sidebar ul li a:hover {
+  background-color: #555; /* Change background color on hover for better UX */
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Display content in a column layout */
+  align-items: center; /* Center items horizontally */
+  margin-left: 220px; /* Leave space for the sidebar */
+}
+
+header {
+  text-align: center;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.product {
+  width: calc(25% - 20px);
+  margin: 10px; /* Equal margin on all sides */
+  text-align: center;
+}
+
+.product img {
+  width: 100%; /* Set image width to 100% of its container */
+  height: 80%; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure images cover the entire space */
+}
+
+.product p {
+  margin: 5px 0;
+}
+footer {
+  background: linear-gradient(to right, #333, #555); /* Gradient background */
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Add shadow */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Specific styles for kurtis */
+.product.kurtis {
+  margin: 10px 5px; /* Equal vertical gap with tops, but smaller horizontal gap */
+}

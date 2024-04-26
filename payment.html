@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Options</title>
+  <link rel="stylesheet" href="payment.css"> <!-- Link to your payment CSS file -->
+</head>
+<body>
+  <h1>Select Payment Option</h1>
+  
+  <!-- Payment options section -->
+  <div id="payment-options">
+    <h2>Cash on Delivery</h2>
+    <p>Select this option to pay cash on delivery.</p>
+    <button onclick="redirectToPayment('cash')">Pay Cash on Delivery</button>
+    
+    <h2>Card Payment</h2>
+    <p>Select this option to pay with your credit or debit card.</p>
+    <!-- Card payment options -->
+    <button onclick="redirectToPayment('debit')">Pay with Debit Card</button>
+    <button onclick="redirectToPayment('credit')">Pay with Credit Card</button>
+    
+    <!-- Add more payment options here if needed -->
+  </div>
+
+  <script>
+    function redirectToPayment(option) {
+      if (option === 'cash') {
+        window.location.href = 'cashpay.html'; // Redirect to cashpay.html for cash on delivery
+      } else if (option === 'debit') {
+        window.location.href = 'debitcard.html'; // Redirect to debitcard.html for debit card payment
+      } else if (option === 'credit') {
+        window.location.href = 'creditcard.html'; // Redirect to creditcard.html for credit card payment
+      }
+      // Add more conditions for other payment options if needed
+    }
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Clothing Website</h1>
+    </header>
+
+    <main>
+      <div class="signup-form">
+        <h2>Sign Up</h2>
+        <form id="signup-form" action="signin.html" method="GET">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+            <small>Format: 1234567890</small>
+          </div>
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <p id="javascript-text"></p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('signup-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Get the phone number
+      var phoneNumber = document.getElementById('phone').value;
+
+      // Append the phone number to the URL as a query parameter
+      var signInUrl = "signin.html?phone=" + encodeURIComponent(phoneNumber);
+      window.location.href = signInUrl; // Redirect to the sign-in page with the phone number
+    });
+  </script>
+</body>
+</html>
+

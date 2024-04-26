@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In</title>
+  <link rel="stylesheet" href="signin.css">
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Clothing Website</h1>
+    </header>
+
+    <main>
+      <div class="signin-form">
+        <h2>Sign In</h2>
+        <form id="signin-form" action="#">
+          <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+            <small>Format: 1234567890</small>
+          </div>
+          <button type="submit">Sign In</button>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <p id="javascript-text"></p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('signin-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Get the phone number from the URL query parameter
+      var urlParams = new URLSearchParams(window.location.search);
+      var signUpPhoneNumber = urlParams.get('phone');
+
+      // Get the phone number entered in the sign-in form
+      var signInPhoneNumber = document.getElementById('phone').value;
+
+      // Compare the phone numbers
+      if (signUpPhoneNumber === signInPhoneNumber) {
+        // Phone numbers match, redirect to welcome.html
+        window.location.href = "welcome.html";
+      } else {
+        // Phone numbers do not match, display an error message
+        alert('Phone numbers do not match! Please check your number.');
+      }
+    });
+  </script>
+</body>
+</html>
